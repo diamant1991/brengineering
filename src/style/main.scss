@@ -1,0 +1,265 @@
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/fonts";
+@import "partials/carousel";
+@import "partials/modal";
+@import "partials/fancybox";
+@import "partials/variable";
+
+body{
+	font-size: 14px;
+	line-height: 1.2;
+	background: #000 url(../img/bg.png)no-repeat 50% 75px;
+	font-family: $pr;
+}
+b,
+strong{
+	font-weight: bold;
+}
+i{
+	font-style: italic;
+}
+.lang{
+	font-family: $pb;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.middle{
+	display: inline-block;
+	vertical-align: middle;
+
+	img{
+		vertical-align: middle;
+	}
+}
+.lang-item{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 11px;
+	opacity: 0.5;
+
+	&.active{
+		opacity: 1;
+	}
+
+	+ .lang-item{
+		margin-left: 15px;
+	}
+
+	&__text{
+		margin-left: 5px;
+		margin-top: 3px;
+	}
+}
+.top-panel{
+	padding-top: 25px;
+	position: relative;
+	z-index: 3;
+	background: #000;
+	min-height: 75px;
+}
+.wrapper{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	color: #fff;
+	padding-bottom: 35px;
+}
+.date{
+	font-family: $ff;
+	font-size: 68px;
+	margin-bottom: 30px;
+}
+.adress{
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: $pr;
+	line-height: 2;
+	margin-bottom: 15px;
+
+	a{
+		color: #fff;
+		display: inline-block;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	&:before{
+		content: "";
+		display: block;
+		width: 7px;
+		height: 16px;
+		margin: auto;
+		margin-bottom: 10px;
+		background: url(../img/geo-icn.png)no-repeat;
+	}
+}
+.btn{
+	font-size: 14px;
+	font-family: $pb;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 15px;
+	border: 2px solid #fff;
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 1px;
+
+	&:hover{
+		background: #fff;
+		color: #000;
+	}
+}
+.btn-submit{
+	background: none;
+	outline: 0;
+	cursor: pointer;
+	width: 235px;
+}
+.back-link{
+	color: #fff;
+	opacity: 0.3;
+	position: relative;
+	top: 2px;
+	text-transform: uppercase;
+
+	&:hover{
+		opacity: 1;
+	}
+
+	&__text{
+		margin-left: 7px;
+		margin-top: 2px;
+		letter-spacing: 2px;
+	}
+}
+.page-title{
+	position: absolute;
+	z-index: 4;
+	left: 50%;
+	top: 27px;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	transform: translate(-50%,0);
+	letter-spacing: 4px;
+}
+.form-block{
+	max-width: 580px;
+	margin: 65px auto;
+	background: rgba(0,0,0,0.5);
+	padding: 50px 90px;
+}
+.label-control{
+	width: 100%;
+	font-size: 12px;
+	font-family: $pr;
+	color: #fff;
+	opacity: 0.5;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: block;
+}
+.form-control{
+	display: block;
+	width: 100%;
+	border: 0;
+	background: none;
+	outline: 0;
+	font-size: 16px;
+	color: #fff;
+	font-family: $pr;
+	height: 45px;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.form-group{
+	margin-bottom: 10px;
+}
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+.checkbox + label {
+  cursor: pointer;
+}
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative; 
+  padding: 0 0 0 35px; 
+  font-size: 14px;
+  color: #fff;
+  font-family: $pr;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/check.png)no-repeat;
+}
+.checkbox:checked + label:after {
+  content: "";
+  width: 12px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  background: url(../img/check-ok.png)no-repeat;
+}
+.checkbox-group{
+	margin-bottom: 20px;
+}
+.submit-group{
+	margin-top: 50px;
+	text-align: center;
+}
+.succes{
+	color: #fff;
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	transform: translate(0,-50%);
+	font-size: 14px;
+	line-height: 1.7;
+
+	p{
+		margin-bottom: 60px;
+	}
+}
+.btn-middle{
+	min-width: 250px;
+}
+.content{
+	margin: 60px 0;
+	color: #fff;
+	text-align: center;
+}
+.map{
+	margin-bottom: 25px;
+
+	img{
+		border-radius: 25px;
+	}
+}
